@@ -1,6 +1,7 @@
 # Databricks notebook source
 import requests
 import json
+from datetime import datetime
 
 # COMMAND ----------
 
@@ -24,5 +25,7 @@ df_bronze = spark.read.json(spark.sparkContext.parallelize([json_string])).coale
 
 # COMMAND ----------
 
-path = "dbfs:/mnt/data/bronze/dataset_brewery/api_response"
+year, month, day = datetime.now().strftime("%Y-%m-%d").split("-")
+
+path = f"dbfs:/mnt/data/bronze/dataset_brewery/{year}/{month}/{day}/api_response"
 df_bronze.write.json(path, mode="overwrite")

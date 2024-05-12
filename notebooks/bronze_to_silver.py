@@ -5,7 +5,11 @@ from pyspark.sql.functions import current_date
 
 # COMMAND ----------
 
-bronze_path = "dbfs:/mnt/data/bronze/dataset_brewery/api_response"
+year, month, day = datetime.now().strftime("%Y-%m-%d").split("-")
+
+# COMMAND ----------
+
+bronze_path = f"dbfs:/mnt/data/bronze/dataset_brewery/{year}/{month}/{day}/api_response"
 df_bronze = spark.read.json(bronze_path)
 
 # COMMAND ----------
@@ -37,8 +41,9 @@ df_silver = spark.createDataFrame(df_silver.rdd, schema=schema)
 
 # COMMAND ----------
 
-silver_path = f"dbfs:/mnt/data/silver/dataset_brewery/brewery"
+silver_path = f"dbfs:/mnt/data/silver/dataset_brewery/{year}/{month}/{day}/brewery"
 
 df_silver.write\
-    .partitionBy("country", "state", "state_province")\
+    .partitionBy("country", "state", "city")\
+    .mode("overwrite")\
     .parquet(silver_path)
