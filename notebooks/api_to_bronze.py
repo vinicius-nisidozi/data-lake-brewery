@@ -24,5 +24,5 @@ df_bronze = spark.read.json(spark.sparkContext.parallelize([json_string])).coale
 
 # COMMAND ----------
 
-path = "dbfs:/mnt/data/bronze/dataset_brewery/brewery_raw/brewery_data/api_response"
+path = "dbfs:/mnt/data/bronze/dataset_brewery/api_response"
 df_bronze.write.json(path, mode="overwrite")
