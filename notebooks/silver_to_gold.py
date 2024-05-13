@@ -42,5 +42,15 @@ df_gold.write\
 
 # COMMAND ----------
 
+spark.sql("""
+          INSERT INTO data_lake_brewery.monitoring.data
+          SELECT 
+            CURRENT_TIMESTAMP() AS UPDATE_TIME, 
+            (SELECT COUNT(*) FROM data_lake_brewery.gold.breweries_vw) AS QUANTITY_OF_LINES, 
+            "gold.breweries_vw" AS TABLE_NAME
+          """)
+
+# COMMAND ----------
+
 # MAGIC %md
 # MAGIC

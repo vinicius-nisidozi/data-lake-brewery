@@ -51,3 +51,13 @@ df_silver.write\
 df_silver.write\
     .mode("overwrite")\
     .saveAsTable("data_lake_brewery.silver.brewery")
+
+# COMMAND ----------
+
+spark.sql("""
+          INSERT INTO data_lake_brewery.monitoring.data
+          SELECT 
+            CURRENT_TIMESTAMP() AS UPDATE_TIME, 
+            (SELECT COUNT(*) FROM data_lake_brewery.silver.brewery) AS QUANTITY_OF_LINES, 
+            "silver.brewery" AS TABLE_NAME
+          """)

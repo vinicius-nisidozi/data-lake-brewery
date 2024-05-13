@@ -33,3 +33,13 @@ df_bronze.write.json(path, mode="overwrite")
 df_bronze.write\
     .mode("overwrite")\
     .saveAsTable("data_lake_brewery.bronze.brewery")
+
+# COMMAND ----------
+
+spark.sql("""
+          INSERT INTO data_lake_brewery.monitoring.data
+          SELECT 
+            CURRENT_TIMESTAMP() AS UPDATE_TIME, 
+            (SELECT COUNT(*) FROM data_lake_brewery.bronze.brewery) AS QUANTITY_OF_LINES, 
+            "bronze.brewery" AS TABLE_NAME
+          """)
