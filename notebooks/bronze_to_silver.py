@@ -49,4 +49,5 @@ df_silver.write\
     .parquet(silver_path)
 
 df_silver.write\
+    .mode("overwrite")\
     .saveAsTable("data_lake_brewery.silver.brewery")
