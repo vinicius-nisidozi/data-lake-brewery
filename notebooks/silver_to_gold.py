@@ -5,24 +5,32 @@ from datetime import datetime
 
 year, month, day = datetime.now().strftime("%Y-%m-%d").split("-")
 
-silver_path = f"dbfs:/mnt/data/silver/dataset_brewery/{year}/{month}/{day}/brewery"
-df_silver = spark.read.parquet(silver_path)
+# COMMAND ----------
+
+spark.sql(f"""
+          CREATE OR REPLACE VIEW data_lake_brewery.gold.breweries_vw AS
+          SELECT
+                COUNT(id) AS brewery_qunatity,
+                brewery_type, 
+                country, 
+                state, 
+                city
+            FROM data_lake_brewery.silver.brewery
+            GROUP BY brewery_type, country, state, city
+          """)
 
 # COMMAND ----------
 
-df_silver.createOrReplaceTempView("BREWERY")
-
-query = """
-SELECT
-    COUNT(id) AS brewery_qunatity,
-    brewery_type, 
-    country, 
-    state, 
-    city
-FROM BREWERY
-GROUP BY brewery_type, country, state, city
-"""
-df_gold = spark.sql(query)
+df_gold = spark.sql("""
+    SELECT
+        COUNT(id) AS brewery_qunatity,
+        brewery_type, 
+        country, 
+        state, 
+        city
+    FROM data_lake_brewery.silver.brewery
+    GROUP BY brewery_type, country, state, city
+          """)
 
 # COMMAND ----------
 

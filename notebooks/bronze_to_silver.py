@@ -47,3 +47,6 @@ df_silver.write\
     .partitionBy("country", "state", "city")\
     .mode("overwrite")\
     .parquet(silver_path)
+
+df_silver.write\
+    .saveAsTable("data_lake_brewery.silver.brewery")

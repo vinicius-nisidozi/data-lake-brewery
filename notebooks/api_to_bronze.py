@@ -29,3 +29,6 @@ year, month, day = datetime.now().strftime("%Y-%m-%d").split("-")
 
 path = f"dbfs:/mnt/data/bronze/dataset_brewery/{year}/{month}/{day}/api_response"
 df_bronze.write.json(path, mode="overwrite")
+
+df_bronze.write\
+    .saveAsTable("data_lake_brewery.bronze.brewery")
