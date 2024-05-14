@@ -36,7 +36,7 @@ Nessa etapa os dados são carregados no formato que a API os fornece, dessa form
 
 
 <h5>Camada Silver:</h5>
-Na sequência, para a camada Silver, os dados recebem um schema, definindo data types para os dados recebidos, ocorre também a remoção de dados duplicados e é insirida uma coluna com os dados de data de inserção dos dados na camada silver.
+Na sequência, para a camada Silver, os dados recebem um schema, definindo data types para os dados recebidos, ocorre também a remoção de dados duplicados e é inserida uma coluna com os dados de data de inserção dos dados na camada silver.
 Após isso, os dados são salvos particionados, por país, estado e cidade, em formato parquet.<br>
 
 ![image](https://github.com/vinicius-nisidozi/data-lake-brewery/assets/113652441/5a080ebd-1953-44d3-84d8-555f42a6a2d4)
