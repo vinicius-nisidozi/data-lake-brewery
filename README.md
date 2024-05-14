@@ -18,6 +18,8 @@ Este é um projeto de Data Engineering para exercitar os seguintes conceitos:<br
 . Azure Databricks<br>
 . Apache Airflow<br>
 
+![image](https://github.com/vinicius-nisidozi/data-lake-brewery/assets/113652441/1644cfc5-4c4b-44f0-b6ef-3268458121f4)
+
 <br><h4>Desenvolvimento:</h4>
 1. <h4>Criação da Estrutura do Data Lake:</h4>
 Nessa etapa foram criadas todas as conexões entre Azure ADLS, Azure Databricks e Apache Airflow. Além de a criação das camadas Bronze, Silver e Gold.
