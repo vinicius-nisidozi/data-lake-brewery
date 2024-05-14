@@ -69,5 +69,5 @@ Além disso, as tasks executadas para cada camada no Airflow disparam e-mails co
 
 <h4>Resultados e Impacto:</h4><br>
 O resultado do projeto foi um Data Lake estruturado no ADLS, com tabelas e views disponibilizadas no Databricks, e com um pipeline sendo orquestrado pelo Apache Airflow.
-A solução apresentada é robusta, escalável, proporciona colcaboração, melhorias futuras, ingestão de novos dados de novas fontes, processamento de big data com alta performance.
+A solução apresentada é robusta, escalável, proporciona colaboração, melhorias futuras, ingestão de novos dados de novas fontes e processamento de big data com alta performance.
 O projeto está publicado em minha conta Azure, todos os códigos utilizados para a execução do pipeline estão neste repositório. 
