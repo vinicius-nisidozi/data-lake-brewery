@@ -39,11 +39,13 @@ Após isso, os dados são salvos particionados, por país, estado e cidade, em f
 
 <h5>Camada Gold:</h5>
 Na última camada, os dados são agregados em uma view contendo a quantidade de cervejarias, agregadas por tipo de cervejaria e localização.
+
 ![image](https://github.com/vinicius-nisidozi/data-lake-brewery/assets/113652441/4eaae7b5-5779-44bd-b393-54bf625513d1)
 
 <h5>Estrutura dos dados no Azure ADLS:</h5>
 Os arquivos foram salvos em uma estrutura organizada em pastadas por data, seguindo a seguinte lógica:
 f"dbfs:/mnt/data/silver/dataset_brewery/{year}/{month}/{day}/brewery" em que year, month e day são variáveis que contém a data atual da execução do pipeline.
+
 ![image](https://github.com/vinicius-nisidozi/data-lake-brewery/assets/113652441/1c59cc33-c7d6-4d99-840b-464cf14d3214)
 
 3. <h4>Orquestração:</h4>
