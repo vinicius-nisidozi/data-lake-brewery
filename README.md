@@ -1,8 +1,15 @@
-# data-lake-brewery
+# Brewery Data Lake
 
-Visão Geral do Projeto:<br>
-
-<h3>Brewery Data Lake</h3>
+<h4>Visão Geral do Projeto:</h4>
+Este é um projeto de Data Engineering para exercitar os seguintes conceitos:<br>
+. Desenho de solução<br>
+. Desenvolvimento de pipelines de dados<br>
+. Orquestração de dados<br>
+. Escalabilidade<br>
+. Qualidade de código<br>
+. Observablidade<br>
+. Completude<br>
+. Consumo de dados de API<br>
 
 <h4>Solução proposta:</h4>
 . Python<br>
@@ -14,6 +21,8 @@ Visão Geral do Projeto:<br>
 <br><h4>Desenvolvimento:</h4>
 1. <h4>Criação da Estrutura do Data Lake:</h4>
 Nessa etapa foram criadas todas as conexões entre Azure ADLS, Azure Databricks e Apache Airflow. Além de a criação das camadas Bronze, Silver e Gold.
+
+![image](https://github.com/vinicius-nisidozi/data-lake-brewery/assets/113652441/63bc5bd9-68a8-4765-87d9-6fb26700dad1)
 
 2. <h4>Ingestão de Dados:</h4>
 <h5>Camada Bronze:</h5>
