@@ -18,7 +18,7 @@ Este é um projeto de Data Engineering para exercitar os seguintes conceitos:<br
 . Azure Databricks<br>
 . Apache Airflow<br>
 
-![image](https://github.com/vinicius-nisidozi/data-lake-brewery/assets/113652441/1644cfc5-4c4b-44f0-b6ef-3268458121f4)
+![image](https://github.com/vinicius-nisidozi/data-lake-brewery/assets/113652441/3e4b89c1-bb39-4d86-93e0-b2e048de48b3)
 
 <br><h4>Desenvolvimento:</h4>
 1. <h4>Criação da Estrutura do Data Lake:</h4>
