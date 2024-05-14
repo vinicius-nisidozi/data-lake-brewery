@@ -10,7 +10,7 @@ Este é um projeto de Data Engineering para exercitar os seguintes conceitos:<br
 . Observablidade<br>
 . Completude<br>
 . Consumo de dados de API<br>
-. Tranformação e tratamento de dados<br>
+. Transformação e tratamento de dados<br>
 
 <h4>Solução proposta:</h4>
 . Python<br>
@@ -30,7 +30,7 @@ Nessa etapa foram criadas todas as conexões entre Azure ADLS, Azure Databricks 
 2. <h4>Ingestão de Dados:</h4>
 <h5>Camada Bronze:</h5>
 Através do Azure Databricks foi desenvolvido um pipeline para ingestão dos dados da API openbrewerydb (https://www.openbrewerydb.org), que contém dados de cervejarias.
-Nessa etapa os dados são carregados no formato que a API os fornece, dessa forma, os dados são salvos em um arquivo json no ADLS, e também disponibilizados em uma tabela no Databricks estruturado na camada bronze.<br>
+Nessa etapa os dados são carregados no formato que a API os fornece, dessa forma, os dados são salvos em um arquivo json no ADLS, e também disponibilizados em uma tabela no Databricks estruturada na camada bronze.<br>
 
 ![image](https://github.com/vinicius-nisidozi/data-lake-brewery/assets/113652441/7e23ad32-0381-4062-983e-abfdd3226389)
 
@@ -70,4 +70,4 @@ Além disso, as tasks executadas para cada camada no Airflow disparam e-mails co
 <h4>Resultados e Impacto:</h4><br>
 O resultado do projeto foi um Data Lake estruturado no ADLS, com tabelas e views disponibilizadas no Databricks, e com um pipeline sendo orquestrado pelo Apache Airflow.
 A solução apresentada é robusta, escalável, proporciona colaboração, melhorias futuras, ingestão de novos dados de novas fontes e processamento de big data com alta performance.
-O projeto está publicado em minha conta Azure, todos os códigos utilizados para a execução do pipeline estão neste repositório. 
+O projeto está publicado em minha conta Azure, todos os códigos utilizados no pipeline estão neste repositório. 
