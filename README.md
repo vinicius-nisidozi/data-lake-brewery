@@ -10,6 +10,7 @@ Este é um projeto de Data Engineering para exercitar os seguintes conceitos:<br
 . Observablidade<br>
 . Completude<br>
 . Consumo de dados de API<br>
+. Tranformação e tratamento de dados<br>
 
 <h4>Solução proposta:</h4>
 . Python<br>
@@ -18,7 +19,7 @@ Este é um projeto de Data Engineering para exercitar os seguintes conceitos:<br
 . Azure Databricks<br>
 . Apache Airflow<br>
 
-![image](https://github.com/vinicius-nisidozi/data-lake-brewery/assets/113652441/3e4b89c1-bb39-4d86-93e0-b2e048de48b3)
+![image](https://github.com/vinicius-nisidozi/data-lake-brewery/assets/113652441/4247df17-bc6d-4c4c-9dd9-33b3bfb754a9)
 
 <br><h4>Desenvolvimento:</h4>
 1. <h4>Criação da Estrutura do Data Lake:</h4>
@@ -31,7 +32,8 @@ Nessa etapa foram criadas todas as conexões entre Azure ADLS, Azure Databricks 
 Através do Azure Databricks foi desenvolvido um pipeline para ingestão dos dados da API openbrewerydb (https://www.openbrewerydb.org), que contém dados de cervejarias.
 Nessa etapa os dados são carregados no formato que a API os fornece, dessa forma, os dados são salvos em um arquivo json no ADLS, e também disponibilizados em uma tabela no Databricks estruturado na camada bronze.
 
-![image](https://github.com/vinicius-nisidozi/data-lake-brewery/assets/113652441/32396a95-5538-4c7b-a01f-9a0582123a9c)
+![image](https://github.com/vinicius-nisidozi/data-lake-brewery/assets/113652441/7e23ad32-0381-4062-983e-abfdd3226389)
+
 
 <h5>Camada Silver:</h5>
 Na sequência, para a camada Silver, os dados recebem um schema, definindo data types para os dados recebidos, ocorre também a remoção de dados duplicados e é insirida uma coluna com os dados de data de inserção dos dados na camada silver.
@@ -60,7 +62,7 @@ Ao final de cada processo na execução das camadas existe um INSERT em uma tabe
 ![image](https://github.com/vinicius-nisidozi/data-lake-brewery/assets/113652441/ded4309e-12f2-48d3-893b-56789a34cdaa)
 
 Além disso, as tasks executadas para cada camada no Airflow disparam e-mails com informações sobre a execução de cada job.
-![image](https://github.com/vinicius-nisidozi/data-lake-brewery/assets/113652441/975a7ee8-c019-47d5-9d3d-55dfa64b4da1)
+![image](https://github.com/vinicius-nisidozi/data-lake-brewery/assets/113652441/435b97df-ea10-4341-aaf0-f5466f586065)
 
 <h4>Resultados e Impacto:</h4><br>
 O resultado do projeto foi um Data Lake estruturado no ADLS, com tabelas e views disponibilizadas no Databricks, e com um pipeline sendo orquestrado pelo Apache Airflow.
