@@ -58,7 +58,7 @@ Nele além da orquestração, é possível realizar o gerenciamento de erros atr
 
 ![image](https://github.com/vinicius-nisidozi/data-lake-brewery/assets/113652441/04b24a4d-b0e0-436b-8fdb-15aff1a2dc49)
 
-5. <h4>Monitoramento e observabilidade dos pipeline:</h4>
+4. <h4>Monitoramento e observabilidade dos pipeline:</h4>
 Ao final de cada processo na execução das camadas existe um INSERT em uma tabela criada na camada "monitoring" que captura a quantidade de dados inseridos, a data atual e a respectiva tabela em que eles foram inseridos.<br>
 
 ![image](https://github.com/vinicius-nisidozi/data-lake-brewery/assets/113652441/ded4309e-12f2-48d3-893b-56789a34cdaa)
